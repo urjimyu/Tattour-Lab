@@ -11,7 +11,7 @@ const Canvas: React.FC = () => {
 			isDrawingMode: true, // 그리기 모드 설정
 		});
 
-		// 그리기 설정 (선의 색상, 굵기 등)
+		// 그리기 설정
 		canvas.freeDrawingBrush.color = "black";
 		canvas.freeDrawingBrush.width = 5;
 
@@ -28,13 +28,15 @@ const Canvas: React.FC = () => {
 			event.e.stopPropagation();
 		});
 
-		fabricCanvasRef.current = canvas; // Save the fabric.Canvas instance
+		fabricCanvasRef.current = canvas;
 
+		//캔버스 지우기
 		return () => {
 			canvas.dispose();
 		};
 	}, []);
 
+	//색상 변경
 	const handleColorChange = (color: string) => {
 		if (fabricCanvasRef.current) {
 			fabricCanvasRef.current.freeDrawingBrush.color = color;
