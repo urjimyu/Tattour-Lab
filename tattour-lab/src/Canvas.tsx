@@ -6,14 +6,6 @@ import styled from "styled-components";
 const Canvas: React.FC = () => {
 	const canvasRef = useRef<HTMLCanvasElement>(null);
 	const fabricCanvasRef = useRef<fabric.Canvas | null>(null);
-	// const [canvas, setCanvas] = useState<fabric.Canvas | null>(null);
-
-	// const initCanvas = () =>
-	// 	new fabric.Canvas(canvasRef.current, {
-	// 		isDrawingMode: true,
-	// 		width: 335,
-	// 		height: 458,
-	// 	});
 
 	useEffect(() => {
 		const canvas = new fabric.Canvas(canvasRef.current, {
@@ -46,8 +38,6 @@ const Canvas: React.FC = () => {
 			canvas.dispose();
 		};
 	}, []);
-
-	// useEffect(() => {}, [canvas]);
 
 	//색상 변경
 	const handleColorChange = (color: string) => {
