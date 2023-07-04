@@ -1,3 +1,3 @@
 TATTOUR LAB
 
-- pretasks(canvas, carousel, bottomsheet, and so on,,,)
+- pretasks(canvas, carousel, bottomsheet, etc,,,)
